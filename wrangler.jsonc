@@ -2,6 +2,8 @@
   // Cloudflare Workers: ملفات الموقع في public/، وsrc/index.js يحوّل الروابط الثانية إلى coachrabhi.com
   "name": "rabhi",
   "main": "src/index.js",
+  // routes تطفي workers.dev تلقائيًا، فنشغّله صراحة
+  "workers_dev": true,
   "compatibility_date": "2025-09-01",
   "assets": {
     "directory": "./public",
