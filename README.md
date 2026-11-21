@@ -2,7 +2,7 @@
 
 صفحة واحدة ثابتة (HTML فقط). ملفات الموقع داخل مجلد `public/`: افتح `public/index.html` في المتصفح.
 
-النشر: Cloudflare Workers يقرأ `wrangler.jsonc`، وNetlify يقرأ `netlify.toml`، والاثنين ينشرون مجلد `public/`.
+النشر: Cloudflare Workers يقرأ `wrangler.jsonc` (النطاق coachrabhi.com، و`src/index.js` يحوّل www وworkers.dev إليه)، وNetlify يقرأ `netlify.toml`، والاثنين ينشرون مجلد `public/`.
 
 ## التعديل
 كل البيانات في كائن `CONFIG` أسفل ملف `public/index.html`:
