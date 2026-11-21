@@ -1,12 +1,10 @@
-// يحوّل www.coachrabhi.com إلى https://coachrabhi.com، ويعرض ملفات الموقع
-// (تحويل workers.dev موقوف مؤقتًا لين يشتغل النطاق)
+// يحوّل أي رابط ثاني (www أو workers.dev) إلى https://coachrabhi.com، ويعرض ملفات الموقع
 const HOST = "coachrabhi.com";
-const REDIRECT_FROM = ["www.coachrabhi.com"];
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (REDIRECT_FROM.includes(url.hostname)) {
+    if (url.hostname !== HOST) {
       url.protocol = "https:";
       url.hostname = HOST;
       url.port = "";
